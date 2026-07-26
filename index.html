@@ -505,16 +505,15 @@
     text-transform:uppercase; letter-spacing:.06em; cursor:pointer;
   }
 <style>
-/* Hilangkan garisan titik-titik & tukar warna teks */
-.blank-field {
+/* 1. Hilangkan SEMUA garisan titik-titik */
+.blank-field, hr, .footer-meta span {
     border-bottom: none !important;
     text-decoration: none !important;
-    color: #ffffff !important;
 }
 
-/* Tukar background bahagian bawah jadi hijau gelap */
-footer, .team-section {
-    background-color: #021812 !important;
+/* 3. Tukar warna tulisan kuning tu jadi warna hijau terang/emas/putih ikut tema asal */
+.blank-field, .footer-meta, .tag, .role {
+    color: inherit !important; /* dia akan ikut warna asal teks laman web awak */
 }
 </style>
 </head>
