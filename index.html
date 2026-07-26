@@ -117,7 +117,7 @@
     from{ transform:translate(0,0); }
     to{ transform:translate(-120px,-120px); }
   }
-  header.hero::after{
+  header.::after{
     content:"";
     position:absolute; right:6%; top:12%;
     width:280px; height:280px;
@@ -127,8 +127,8 @@
     pointer-events:none;
   }
   @keyframes spinSlow{ to{ transform:rotate(360deg); } }
-  .hero-inner{ position:relative; z-index:2; max-width:920px; opacity:0; animation:heroIn 1s ease-out .15s forwards; }
-  @keyframes heroIn{ from{ opacity:0; transform:translateY(16px); } to{ opacity:1; transform:translateY(0); } }
+  .-inner{ position:relative; z-index:2; max-width:920px; opacity:0; animation:In 1s ease-out .15s forwards; }
+  @keyframes In{ from{ opacity:0; transform:translateY(16px); } to{ opacity:1; transform:translateY(0); } }
   .hero .eyebrow{ color:var(--gold-light); }
   header.hero h1{
     font-size:clamp(2.1rem, 4.4vw, 3.4rem);
@@ -553,8 +553,13 @@
   </div>
   <div class="hero-inner">
    
-    <p class="hero-meta">Lecturer: NAMA DR  &nbsp;·&nbsp; Group: Group 2</p>
+    
     <h1>Shariah Compliance in Islamic Banking</h1>
+    <div class="hero-meta-badge">
+  <span><strong>Prepared for:</strong> Dr. [Nama Lecturer]</span>
+  <span class="meta-divider">•</span>
+  <span><strong>Group:</strong> Group 2</span>
+</div>
     <p class="lead">mukadimah pendek tentang istilah shariah islamic banking.</p>
     <a href="#intro" class="scroll-cue">Scroll to begin ↓</a>
   </div>
@@ -1136,7 +1141,7 @@
       margin-bottom: 1rem;
       font-weight: 700;
     ">
-      Shariah non-compliance (SNC) income disclosure in Malaysia
+      Shariah non-compliance (SNC) income disclosure in Malaysia (tukar juga, rewrite balik)
     </h2>
 
     <!-- PENERANGAN -->
@@ -1674,7 +1679,7 @@
     <div class="member"><div class="role">7</div><div class="tag">Critical Analysis</div><div class="field">Name</div><div class="field">Matric No.</div></div>
     <div class="member"><div class="role">8</div><div class="tag">Real-Life Application</div><div class="field">Name</div><div class="field">Matric No.</div></div>
     <div class="member"><div class="role">9</div><div class="tag">Real case &amp; Current Issue</div><div class="field">Name</div><div class="field">Matric No.</div></div>
-    <div class="member"><div class="role">10</div><div class="tag">Reflection & References</div><div class="field">Nur Aishah Najwa Binti Habiburrahman</div><div class="field">Matric No.</div></div>
+    <div class="member"><div class="role">10</div><div class="tag">Reflection & References</div><div class="field">Name</div><div class="field">Matric No.</div></div>
   </div>
 </section>
 
