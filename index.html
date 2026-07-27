@@ -117,7 +117,7 @@
     from{ transform:translate(0,0); }
     to{ transform:translate(-120px,-120px); }
   }
-  header.::after{
+  header.hero::after{
     content:"";
     position:absolute; right:6%; top:12%;
     width:280px; height:280px;
@@ -127,7 +127,7 @@
     pointer-events:none;
   }
   @keyframes spinSlow{ to{ transform:rotate(360deg); } }
-  .-inner{ position:relative; z-index:2; max-width:920px; opacity:0; animation:In 1s ease-out .15s forwards; }
+  .hero-inner{ position:relative; z-index:2; max-width:920px; opacity:0; animation:In 1s ease-out .15s forwards; }
   @keyframes In{ from{ opacity:0; transform:translateY(16px); } to{ opacity:1; transform:translateY(0); } }
   .hero .eyebrow{ color:var(--gold-light); }
   header.hero h1{
