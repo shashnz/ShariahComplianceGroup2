@@ -172,6 +172,48 @@
   @keyframes floatCoin{
     0%,100%{ transform:translateY(0) rotate(0deg); }
     50%{ transform:translateY(-18px) rotate(8deg); }
+   } 
+    /* twinkling sparkles */
+.hero-sparkles{ position:absolute; inset:0; z-index:1; pointer-events:none; overflow:hidden; }
+.hero-sparkles .spark{
+  position:absolute;
+  width:5px; height:5px;
+  border-radius:50%;
+  background:var(--gold-light);
+  box-shadow:0 0 10px 3px rgba(231,205,130,.85);
+  animation:twinkle 3.2s ease-in-out infinite;
+}
+.spark.s1{ top:20%; left:38%; animation-delay:0s; }
+.spark.s2{ top:48%; left:62%; animation-delay:.6s; }
+.spark.s3{ top:72%; left:30%; animation-delay:1.1s; }
+.spark.s4{ top:32%; right:22%; animation-delay:1.6s; }
+.spark.s5{ top:82%; right:38%; animation-delay:.9s; }
+.spark.s6{ top:12%; right:48%; animation-delay:2.1s; }
+.spark.s7{ top:58%; left:18%; animation-delay:1.3s; }
+.spark.s8{ top:26%; right:58%; animation-delay:.3s; }
+@keyframes twinkle{
+  0%,100%{ opacity:0; transform:scale(.4); }
+  50%{ opacity:1; transform:scale(1.5); }
+}
+
+/* extra drifting orbit ring to fill empty space */
+.hero-orbit{
+  position:absolute; z-index:1; pointer-events:none;
+  right:12%; bottom:18%;
+  width:160px; height:160px;
+  border:1px solid rgba(231,205,130,.35);
+  border-radius:50%;
+  animation:orbitSpin 25s linear infinite;
+}
+.hero-orbit::before{
+  content:"";
+  position:absolute; top:-4px; left:50%;
+  width:8px; height:8px; margin-left:-4px;
+  border-radius:50%;
+  background:var(--gold-light);
+  box-shadow:0 0 12px 3px rgba(231,205,130,.7);
+}
+@keyframes orbitSpin{ to{ transform:rotate(360deg); } }
   }
 
   /* mosque skyline silhouette along hero base */
@@ -547,6 +589,17 @@
   <div class="hero-sky"></div>
 <div class="pattern-strip"></div>
 <div class="hero-coins">
+  <div class="hero-sparkles">
+  <span class="spark s1"></span>
+  <span class="spark s2"></span>
+  <span class="spark s3"></span>
+  <span class="spark s4"></span>
+  <span class="spark s5"></span>
+  <span class="spark s6"></span>
+  <span class="spark s7"></span>
+  <span class="spark s8"></span>
+</div>
+<div class="hero-orbit"></div>
       <span class="coin c1">ريال</span>
       <span class="coin c2">RM</span>
       <span class="coin c3">€</span>
