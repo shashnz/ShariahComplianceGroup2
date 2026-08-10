@@ -932,9 +932,10 @@ section#timeline.tint-gold{
 </section>
 
 <!-- CRITICAL ANALYSIS -->
+<!-- CRITICAL ANALYSIS -->
 <section id="analysis" data-aos="fade-up" style="
   position: relative;
-  background: linear-gradient(rgba(15, 32, 23, 0.8), rgba(15, 32, 23, 0.9)), 
+  background: linear-gradient(rgba(58, 34, 12, 0.82), rgba(80, 48, 15, 0.88)), 
               url('https://images.unsplash.com/photo-1564769625905-50e93615e769?auto=format&fit=crop&w=1600&q=80');
   background-size: cover;
   background-position: center;
@@ -947,20 +948,19 @@ section#timeline.tint-gold{
   overflow: hidden;
 ">
 
-  <!-- TAJUK SECTION 3 -->
   <div style="text-align: center; margin-bottom: 3rem; position: relative; z-index: 2;">
     <p style="color: #ffd700; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 0.4rem; font-size: 0.85rem; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">3 • Critical Analysis</p>
     <h2 style="color: #ffffff; font-size: 2rem; margin-top: 0; font-weight: 700; text-shadow: 0 2px 10px rgba(0,0,0,0.6);"> Critical Challenges and Comtempory Issues Shaping Modern Islamic Finance</h2>
-    <p style="max-width: 720px; margin: 0.8rem auto 0; color: #e0e0e0; font-size: 0.98rem; line-height: 1.6; text-shadow: 0 1px 3px rgba(0,0,0,0.8);">
+    <p style="max-width: 720px; margin: 0.8rem auto 0; color: #f0e6d2; font-size: 0.98rem; line-height: 1.6; text-shadow: 0 1px 3px rgba(0,0,0,0.8);">
       A closer look at how digital innovation, ethical dilemmas and market benchmarks affect Islamic banking today.
     </p>
   </div>
 
-  <!-- GRID KOTAK ANALISIS DENGAN EFEK KILAUAN EMAS -->
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.8rem; position: relative; z-index: 2;">
 
     <!-- CARD 1 -->
-    <div style="
+    <div class="tilt-card" style="
+      position: relative; overflow: hidden;
       background: rgba(255, 255, 255, 0.92);
       backdrop-filter: blur(8px);
       border: 1px solid rgba(255, 215, 0, 0.3);
@@ -968,24 +968,26 @@ section#timeline.tint-gold{
       padding: 1.8rem;
       color: #222222;
       box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transition: transform .15s ease, box-shadow .3s ease, border-color .3s ease;
+      transform-style: preserve-3d;
       cursor: pointer;
     "
-    onmouseover="this.style.transform='translateY(-8px) scale(1.02)'; this.style.borderColor='#ffd700'; this.style.boxShadow='0 15px 30px rgba(255, 215, 0, 0.3)';"
-    onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.borderColor='rgba(255, 215, 0, 0.3)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)';">
-      
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.8rem;">
+    onmousemove="tiltCard(event, this)"
+    onmouseleave="resetTilt(this)">
+      <span style="position:absolute; top:-1.2rem; right:.4rem; font-family:'Amiri',serif; font-size:7rem; font-weight:700; color:#1b5e20; opacity:.09; line-height:1; pointer-events:none;">01</span>
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.8rem; position:relative;">
         <span style="background: #1b5e20; color: #ffd700; font-size: 0.72rem; font-weight: 800; padding: 4px 10px; border-radius: 20px; text-transform: uppercase; letter-spacing: 1px;">Issue 01</span>
         <span style="font-size: 1.2rem;">⚡️</span>
       </div>
-      <h3 style="color: #1b5e20; margin: 0 0 0.6rem 0; font-size: 1.15rem; font-weight: 700;">Digital & Fintech Pressure</h3>
-      <p style="color: #444444; font-size: 0.9rem; line-height: 1.55; margin: 0; text-align: justify;">
+      <h3 style="color: #1b5e20; margin: 0 0 0.6rem 0; font-size: 1.15rem; font-weight: 700; position:relative;">Digital & Fintech Pressure</h3>
+      <p style="color: #444444; font-size: 0.9rem; line-height: 1.55; margin: 0; text-align: justify; position:relative;">
        FinTech innovations like digital wallets, digital onboarding processes, Robo Advisory and crowdfunding have transformed Islamic banking. Despite making the work easier, these advancements complicate Shariah compliance. All Islamic banks need to ensure that all their technological products and transactions pass through the Shariah approval process before use. Due to the fast-paced changes in the technological world, there is a need for strong partnership among regulators, Shariah experts, and technologists. (Bank Negara Malaysia, 2019).
       </p>
     </div>
 
     <!-- CARD 2 -->
-    <div style="
+    <div class="tilt-card" style="
+      position: relative; overflow: hidden;
       background: rgba(255, 255, 255, 0.92);
       backdrop-filter: blur(8px);
       border: 1px solid rgba(255, 215, 0, 0.3);
@@ -993,63 +995,13 @@ section#timeline.tint-gold{
       padding: 1.8rem;
       color: #222222;
       box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transition: transform .15s ease, box-shadow .3s ease, border-color .3s ease;
+      transform-style: preserve-3d;
       cursor: pointer;
     "
-    onmouseover="this.style.transform='translateY(-8px) scale(1.02)'; this.style.borderColor='#ffd700'; this.style.boxShadow='0 15px 30px rgba(255, 215, 0, 0.3)';"
-    onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.borderColor='rgba(255, 215, 0, 0.3)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)';">
-      
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.8rem;">
-        <span style="background: #1b5e20; color: #ffd700; font-size: 0.
-          72rem; font-weight: 800; padding: 4px 10px; border-radius: 20px; text-transform: uppercase; letter-spacing: 1px;">Issue 02</span>
-        <span style="font-size: 1.2rem;">⚖️</span>
-      </div>
-      <h3 style="color: #1b5e20; margin: 0 0 0.6rem 0; font-size: 1.15rem; font-weight: 700;">Shariah-Compliant vs Based</h3>
-      <p style="color: #444444; font-size: 0.9rem; line-height: 1.55; margin: 0; text-align: justify;">
-        A key challenge in Islamic finance is differentiating between Shariah-compliant and Shariah-based instruments. The Shariah-compliant instruments meet the legal requirements of Islamic law, while the Shariah-based instruments align with the underlying objectives of the Shariah such as justice, equity, transparency and risk sharing. The extensive use of Tawarruq has alarmed some scholars as it resembles debt financing. Hence, Islamic financial institutions must develop more partnership-oriented products. (International Shariah Research Academy for Islamic Finance, 2020). 
-      </p>
-    </div>
-
-    <!-- CARD 3 -->
-    <div style="
-      background: rgba(255, 255, 255, 0.92);
-      backdrop-filter: blur(8px);
-      border: 1px solid rgba(255, 215, 0, 0.3);
-      border-radius: 14px;
-      padding: 1.8rem;
-      color: #222222;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      cursor: pointer;
-    "
-    onmouseover="this.style.transform='translateY(-8px) scale(1.02)'; this.style.borderColor='#ffd700'; this.style.boxShadow='0 15px 30px rgba(255, 215, 0, 0.3)';"
-    onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.borderColor='rgba(255, 215, 0, 0.3)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)';">
-      
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.8rem;">
-        <span style="background: #1b5e20; color: #ffd700; font-size: 0.72rem; font-weight: 800; padding: 4px 10px; border-radius: 20px; text-transform: uppercase; letter-spacing: 1px;">Issue 03</span>
-        <span style="font-size: 1.2rem;">📈</span>
-      </div>
-      <h3 style="color: #1b5e20; margin: 0 0 0.6rem 0; font-size: 1.15rem; font-weight: 700;">Benchmark & Pricing Dependency</h3>
-      <p style="color: #444444; font-size: 0.9rem; line-height: 1.55; margin: 0; text-align: justify;">
-        Despite being non-interest-bearing, Islamic banks still adopt conventional benchmarks like BFR and KLIBOR to measure their financing products. While this maintains market competitiveness and pricing consistency, it causes public confusion regarding the distinctiveness of Islamic financial institutions. Therefore, this is why most researchers strongly advocate for Islamic-based pricing benchmarks. (Accounting and Auditing Organisation for Islamic Financial Institutions, 2023).
-      </p>
-    </div>
-
-  </div>
-
-</section>
-  
-<!-- REAL PRODUCTS -->
-<section id="products" style="
-  position: relative;
-  background: linear-gradient(135deg, #0f2017 0%, #1b3a2b 100%);
-  padding: 4rem 2rem;
-  border-radius: 16px;
-  margin: 2.5rem 0;
-  color: #ffffff;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-">
-
+    onmousemove="tiltCard(event, this)"
+    onmouseleave="resetTilt(this)">
+      <span style="position:absolute; top:-1.2rem; right:.
   <!-- TAJUK SECTION -->
   <div style="text-align: center; margin-bottom: 3.5rem;">
     <p style="color: #ffd700; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 0.4rem; font-size: 0.85rem;">4 • Real-Life Application</p>
@@ -1833,7 +1785,32 @@ Universiti Malaysia Kelantan · Faculty of Entrepreneurship and Business
     el.classList.add('reveal');
     el.style.transitionDelay = (i % 6) * 70 + 'ms';
   });
+document.querySelectorAll(revealSelectors).forEach((el, i) => {
+    el.classList.add('reveal');
+    el.style.transitionDelay = (i % 6) * 70 + 'ms';
+  });
 
+  // 3D tilt effect for Critical Analysis cards
+  function tiltCard(e, el){
+    const r = el.getBoundingClientRect();
+    const x = e.clientX - r.left;
+    const y = e.clientY - r.top;
+    const midX = r.width / 2, midY = r.height / 2;
+    const rotateY = ((x - midX) / midX) * 8;
+    const rotateX = ((midY - y) / midY) * 8;
+    el.style.transform = perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px) scale(1.02);
+    el.style.borderColor = '#ffd700';
+    el.style.boxShadow = '0 15px 30px rgba(255, 215, 0, 0.3)';
+  }
+  function resetTilt(el){
+    el.style.transform = 'perspective(800px) rotateX(0) rotateY(0) translateY(0) scale(1)';
+    el.style.borderColor = 'rgba(255, 215, 0, 0.3)';
+    el.style.boxShadow = '0 8px 20px rgba(0,0,0,0.2)';
+  }
+
+  const io = new IntersectionObserver((entries) => {
+    ...
+  
   const io = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
