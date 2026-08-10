@@ -65,7 +65,15 @@
     color:var(--gold);
     font-weight:500;
   }
-  
+  /* ===== KOD FIX UNTUK PRINT PDF ===== */
+@media print {
+  [data-aos], .auto-reveal, body * {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+    transition: none !important;
+  }
+}
   /* ---------- geometric star motif (signature element) ---------- */
   .star-motif{ opacity:.9; }
   .pattern-strip{
