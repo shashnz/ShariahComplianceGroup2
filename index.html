@@ -8,7 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 <style>/* KEMASKINI KHAS UNTUK SECTION 3 & 4 SUPAYA DUDUK TENGAH */ 
- /* Custom Background & Styling untuk Critical Analysis & Real-Life Application */
+/* Custom Background & Styling untuk Critical Analysis & Real-Life Application */
 
 /* Critical Analysis Section (Dark / Emerald Theme) */
 .section-critical {
@@ -90,7 +90,99 @@
 .app-card h3 {
   color: #0f382c;
   margin-bottom: 10px;
-} 
+}
+/* CONTAINER UTAMA BANNER & CARDS */
+.analysis-hero-container {
+  background: linear-gradient(rgba(10, 25, 20, 0.85), rgba(10, 25, 20, 0.85)), 
+              url('https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&q=80'); /* Gambar corak/masjid */
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  padding: 50px 30px;
+  color: #ffffff;
+  max-width: 1000px;
+  margin: 0 auto;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* HEADER DALAM HERO CARD */
+.analysis-hero-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.analysis-eyebrow {
+  color: #f1c40f; /* Warna kuning gold */
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.analysis-title {
+  font-family: 'Amiri', serif; /* Menggunakan font serif macam dalam skrin */
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.analysis-subtitle {
+  color: #d0d7de;
+  font-size: 0.95rem;
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* GRID UNTUK KAD WHITE/LIGHT DI BAWAH */
+.analysis-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+/* KAD WHITE GLASS STYLE */
+.issue-card {
+  background: rgba(240, 248, 245, 0.92); /* Background cerah separa lutsinar */
+  border-radius: 16px;
+  padding: 25px 20px;
+  color: #1c3b2b;
+  text-align: left;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* BADGE ISSUE 01, ISSUE 02 */
+.issue-badge {
+  display: inline-block;
+  background-color: #1b5e3a; /* Hijau gelap */
+  color: #79f2a6; /* Hijau neon lembut */
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 5px 12px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.issue-card h3 {
+  color: #144027;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.issue-card p {
+  color: #4a5568;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  margin: 0;
+}
+  
 #analysis, #products, 
 #analysis .content-card, #products .content-card,
 #analysis .section-container, #products .section-container {
