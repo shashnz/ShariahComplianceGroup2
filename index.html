@@ -429,6 +429,59 @@ section.tint-emerald > *{
   font-size:.93rem !important;
   line-height:1.75;
 }
+  /* ---- MOBILE: swipe carousel untuk kad Critical Analysis ---- */
+@media (max-width:760px){
+  #analysis .grid-3{
+    display:flex;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    gap:1rem;
+    padding-bottom:.6rem;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+  }
+  #analysis .grid-3::-webkit-scrollbar{ display:none; }
+  #analysis .grid-3 .card{
+    flex:0 0 82%;
+    scroll-snap-align:center;
+  }
+}
+#analysis .swipe-hint{
+  display:none;
+  text-align:center;
+  font-size:.78rem;
+  color:#e7cd82;
+  margin-bottom:.8rem;
+  letter-spacing:.05em;
+}
+@media (max-width:760px){
+  #analysis .swipe-hint{ display:block; }
+}
+/* ---- Icon terapung-apung ---- */
+#analysis .float-icon{
+  position:absolute;
+  font-size:2.1rem;
+  opacity:.55;
+  pointer-events:none;
+  filter: drop-shadow(0 6px 10px rgba(0,0,0,.35));
+  animation: floatDrift 6s ease-in-out infinite;
+  z-index:0;
+}
+#analysis > .float-icon{ z-index:0; }
+#analysis .float-icon.i1{ top:6%;  left:4%;  animation-duration:7s; }
+#analysis .float-icon.i2{ top:16%; right:5%; animation-duration:5.5s; animation-delay:.6s; }
+#analysis .float-icon.i3{ bottom:16%; left:8%; animation-duration:6.5s; animation-delay:1.2s; }
+#analysis .float-icon.i4{ bottom:8%; right:10%; animation-duration:8s;  animation-delay:.3s; }
+
+@keyframes floatDrift{
+  0%,100%{ transform: translateY(0) translateX(0) rotate(0deg); }
+  25%{ transform: translateY(-16px) translateX(6px) rotate(6deg); }
+  50%{ transform: translateY(4px) translateX(-4px) rotate(-4deg); }
+  75%{ transform: translateY(-10px) translateX(3px) rotate(3deg); }
+}
+@media (prefers-reduced-motion:reduce){
+  #analysis .float-icon{ animation:none; }
+}
   /* ---------- scroll reveal ---------- */
   .reveal{ opacity:0; transform:translateY(22px); transition:opacity .7s ease, transform .7s ease; }
   .reveal.in{ opacity:1; transform:translateY(0); }
@@ -1030,6 +1083,20 @@ section#timeline.tint-gold{
 <!-- SECTION 3: CRITICAL ANALYSIS -->
 <!-- SECTION 3: CRITICAL ANALYSIS -->
 <section id="analysis" class="tint-deep">
+  <section id="analysis" class="tint-deep">
+  <span class="float-icon i1">💳</span>
+  <span class="float-icon i2">🪙</span>
+  <span class="float-icon i3">📊</span>
+  <span class="float-icon i4">📱</span>
+
+  <div class="section-head">
+    <p class="eyebrow"><span class="num">3</span>Critical Analysis</p>
+    <h2>Critical Challenges and Contemporary Issues Shaping Modern Islamic Finance</h2>
+    <p>A closer look at how digital innovation, ethical dilemmas, and market benchmarks affect Islamic banking today.</p>
+  </div>
+
+  <p class="swipe-hint">👉 Swipe </p>
+    
   <div class="section-head">
     <p class="eyebrow"><span class="num">3</span>Critical Analysis</p>
     <h2>Critical Challenges and Contemporary Issues Shaping Modern Islamic Finance</h2>
