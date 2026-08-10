@@ -332,156 +332,8 @@ section.tint-emerald > *{
     border-color:var(--gold);
   }
   .card h3{ font-size:1.02rem; color:var(--emerald-mid); margin-bottom:.5rem; }
-  .card p{ font-size:.92rem; color:var(--ink-soft); }
-/* =====================================================
-   SECTION 3 — CRITICAL ANALYSIS (glass cards on emerald)
-   ===================================================== */
-#analysis .section-head h2{
-  background: linear-gradient(90deg, var(--gold-light), #fff, var(--gold-light));
-  -webkit-background-clip:text; background-clip:text; color:transparent;
-}
-#analysis .section-head::after{
-  content:"";
-  display:block;
-  width:64px; height:3px;
-  margin-top:.9rem;
-  background: linear-gradient(90deg, var(--gold), transparent);
-  border-radius:2px;
-}
-#analysis{ position: relative; overflow: hidden; }
-#analysis::before{
-  content:"";
-  position:absolute; inset:0;
-  z-index:0;
-  opacity:.16;
-  background-repeat:no-repeat;
-  background-image:
-    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><g fill="none" stroke="%23d4af37" stroke-width="1.4"><rect x="18" y="55" width="100" height="65" rx="10"/><path d="M18 78 h100" /><circle cx="98" cy="98" r="9"/><path d="M132 45 q18 10 18 28" /><path d="M144 32 q30 16 30 48" /></g></svg>'),
-    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="220" height="220"><g fill="none" stroke="%23e7cd82" stroke-width="1.4"><path d="M110 14 L182 46 L182 122 Q182 178 110 206 Q38 178 38 122 L38 46 Z"/><path d="M68 110 L98 140 L156 78" stroke-width="2.2"/></g></svg>'),
-    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="230" height="170"><g fill="none" stroke="%23d4af37" stroke-width="1.4"><path d="M10 135 L62 92 L104 114 L156 42 L220 16" /><circle cx="62" cy="92" r="4.5"/><circle cx="104" cy="114" r="4.5"/><circle cx="156" cy="42" r="4.5"/><circle cx="220" cy="16" r="4.5"/></g></svg>');
-  background-position: 0% 8%, 68% 58%, 100% 92%;
-  background-size: 190px 190px, 250px 250px, 260px 190px;
-  pointer-events:none;
-}
-#analysis > *{ position:relative; z-index:1; }
-#analysis .grid-3{ gap: 1.6rem; }
-#analysis .card{
-  position: relative;
-  background: linear-gradient(160deg, rgba(255,255,255,.07), rgba(255,255,255,.02));
-  border: 1px solid rgba(212,175,55,.28);
-  border-radius: 14px;
-  padding: 1.9rem 1.6rem 1.7rem;
-  overflow: hidden;
-  backdrop-filter: blur(4px);
-  transition: transform .4s cubic-bezier(.2,.8,.3,1), box-shadow .4s ease, border-color .4s ease;
-}
-#analysis .card::before{
-  content:"";
-  position:absolute; top:0; left:0; right:0; height:3px;
-  background: linear-gradient(90deg, transparent, #d4af37, transparent);
-  opacity:.85;
-}
-#analysis .card::after{
-  content:"";
-  position:absolute; right:-30px; bottom:-30px;
-  width:120px; height:120px; border-radius:50%;
-  background: radial-gradient(circle, rgba(212,175,55,.14), transparent 70%);
-  pointer-events:none;
-}
-#analysis .card:hover{
-  transform: translateY(-8px);
-  border-color:#d4af37;
-  box-shadow: 0 22px 40px -18px rgba(0,0,0,.55), 0 0 0 1px rgba(212,175,55,.25) inset;
-}
-#analysis .card .eyebrow{
-  font-family:'JetBrains Mono',monospace;
-  font-size:.7rem !important;
-  letter-spacing:.12em !important;
-  color:#e7cd82 !important;
-  border:1px solid rgba(231,205,130,.4);
-  padding:.2rem .55rem;
-  border-radius:20px;
-  display:inline-block;
-}
-#analysis .card > div:first-child span:last-child{
-  width:38px; height:38px;
-  display:flex; align-items:center; justify-content:center;
-  border-radius:50%;
-  background: rgba(212,175,55,.14);
-  border:1px solid rgba(212,175,55,.4);
-}
-#analysis .card h3{
-  color:#f4e6b8 !important;
-  font-size:1.18rem !important;
-  line-height:1.3;
-  margin-bottom:.7rem !important;
-  position:relative;
-  padding-bottom:.6rem;
-}
-#analysis .card h3::after{
-  content:"";
-  position:absolute; left:0; bottom:0;
-  width:34px; height:2px;
-  background:#d4af37;
-}
-#analysis .card p{
-  color:#d7e4de !important;
-  font-size:.93rem !important;
-  line-height:1.75;
-}
-  /* ---- MOBILE: swipe carousel untuk kad Critical Analysis ---- */
-@media (max-width:760px){
-  #analysis .grid-3{
-    display:flex;
-    overflow-x:auto;
-    scroll-snap-type:x mandatory;
-    gap:1rem;
-    padding-bottom:.6rem;
-    -webkit-overflow-scrolling:touch;
-    scrollbar-width:none;
-  }
-  #analysis .grid-3::-webkit-scrollbar{ display:none; }
-  #analysis .grid-3 .card{
-    flex:0 0 82%;
-    scroll-snap-align:center;
-  }
-}
-#analysis .swipe-hint{
-  display:none;
-  text-align:center;
-  font-size:.78rem;
-  color:#e7cd82;
-  margin-bottom:.8rem;
-  letter-spacing:.05em;
-}
-@media (max-width:760px){
-  #analysis .swipe-hint{ display:block; }
-}
-/* ---- Icon terapung-apung ---- */
-#analysis .float-icon{
-  position:absolute;
-  font-size:2.1rem;
-  opacity:.55;
-  pointer-events:none;
-  filter: drop-shadow(0 6px 10px rgba(0,0,0,.35));
-  animation: floatDrift 6s ease-in-out infinite;
-  z-index:0;
-}
-#analysis > .float-icon{ z-index:0; }
-#analysis .float-icon.i1{ top:6%;  left:4%;  animation-duration:7s; }
-#analysis .float-icon.i2{ top:16%; right:5%; animation-duration:5.5s; animation-delay:.6s; }
-#analysis .float-icon.i3{ bottom:16%; left:8%; animation-duration:6.5s; animation-delay:1.2s; }
-#analysis .float-icon.i4{ bottom:8%; right:10%; animation-duration:8s;  animation-delay:.3s; }
-
-@keyframes floatDrift{
-  0%,100%{ transform: translateY(0) translateX(0) rotate(0deg); }
-  25%{ transform: translateY(-16px) translateX(6px) rotate(6deg); }
-  50%{ transform: translateY(4px) translateX(-4px) rotate(-4deg); }
-  75%{ transform: translateY(-10px) translateX(3px) rotate(3deg); }
-}
-@media (prefers-reduced-motion:reduce){
-  #analysis .float-icon{ animation:none; }
-}
+  .card p{ font-size:.92rem; color:var(--ink-soft); } 
+   
   /* ---------- scroll reveal ---------- */
   .reveal{ opacity:0; transform:translateY(22px); transition:opacity .7s ease, transform .7s ease; }
   .reveal.in{ opacity:1; transform:translateY(0); }
@@ -572,8 +424,6 @@ section.tint-emerald > *{
   .hadith-block cite{ display:block; margin-top:.7rem; font-family:'JetBrains Mono',monospace; font-style:normal; font-size:.72rem; color:var(--gold-light); }
 
   /* ---------- timeline ---------- */
-
-  /* ---------- timeline ---------- */
 .timeline{ position:relative; margin-top:2.4rem; padding-left:2.2rem; }
 .timeline::before{
   content:""; position:absolute; left:5px; top:6px; bottom:6px; width:3px;
@@ -623,6 +473,7 @@ section#timeline.tint-gold{
 #timeline .eyebrow{ color:var(--gold-light); }
 
 #timeline > *{ position:relative; z-index:1; }
+   
   /* ---------- flowchart ---------- */
   .flowchart{ display:flex; align-items:stretch; gap:0; margin-top:2rem; flex-wrap:wrap; }
   .flow-step{
@@ -1081,134 +932,262 @@ section#timeline.tint-gold{
 
 
 <!-- SECTION 3: CRITICAL ANALYSIS -->
-<!-- SECTION 3: CRITICAL ANALYSIS -->
-<section id="analysis" class="tint-deep">
-  <section id="analysis" class="tint-deep">
-  <span class="float-icon i1">💳</span>
-  <span class="float-icon i2">🪙</span>
-  <span class="float-icon i3">📊</span>
-  <span class="float-icon i4">📱</span>
+<section id="analysis" data-aos="fade-up" style="
+  position: relative;
+  background: linear-gradient(rgba(15, 32, 23, 0.8), rgba(15, 32, 23, 0.9)), 
+              url('https://images.unsplash.com/photo-1564769625905-50e93615e769?auto=format&fit=crop&w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 4rem 2rem;
+  border-radius: 16px;
+  margin: 2.5rem auto;
+  color: #ffffff;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  overflow: hidden;
+">
 
-  <div class="section-head">
-    <p class="eyebrow"><span class="num">3</span>Critical Analysis</p>
-    <h2>Critical Challenges and Contemporary Issues Shaping Modern Islamic Finance</h2>
-    <p>A closer look at how digital innovation, ethical dilemmas, and market benchmarks affect Islamic banking today.</p>
+  <!-- TAJUK SECTION 3 -->
+  <div style="text-align: center; margin-bottom: 3rem; position: relative; z-index: 2;">
+    <p style="color: #ffd700; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 0.4rem; font-size: 0.85rem; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">3 • Critical Analysis</p>
+    <h2 style="color: #ffffff; font-size: 2rem; margin-top: 0; font-weight: 700; text-shadow: 0 2px 10px rgba(0,0,0,0.6);"> Critical Challenges and Comtempory Issues Shaping Modern Islamic Finance</h2>
+    <p style="max-width: 720px; margin: 0.8rem auto 0; color: #e0e0e0; font-size: 0.98rem; line-height: 1.6; text-shadow: 0 1px 3px rgba(0,0,0,0.8);">
+      A closer look at how digital innovation, ethical dilemmas and market benchmarks affect Islamic banking today.
+    </p>
   </div>
 
-  <p class="swipe-hint">👉 Swipe </p>
-    
-  <div class="section-head">
-    <p class="eyebrow"><span class="num">3</span>Critical Analysis</p>
-    <h2>Critical Challenges and Contemporary Issues Shaping Modern Islamic Finance</h2>
-    <p>A closer look at how digital innovation, ethical dilemmas, and market benchmarks affect Islamic banking today.</p>
-  </div>
+  <!-- GRID KOTAK ANALISIS DENGAN EFEK KILAUAN EMAS -->
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.8rem; position: relative; z-index: 2;">
 
-  <div class="grid-3">
-    <!-- ISSUE 01 -->
-    <div class="card">
+    <!-- CARD 1 -->
+    <div style="
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 215, 0, 0.3);
+      border-radius: 14px;
+      padding: 1.8rem;
+      color: #222222;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      cursor: pointer;
+    "
+    onmouseover="this.style.transform='translateY(-8px) scale(1.02)'; this.style.borderColor='#ffd700'; this.style.boxShadow='0 15px 30px rgba(255, 215, 0, 0.3)';"
+    onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.borderColor='rgba(255, 215, 0, 0.3)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)';">
+      
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.8rem;">
-        <span class="eyebrow">Issue 01</span>
+        <span style="background: #1b5e20; color: #ffd700; font-size: 0.72rem; font-weight: 800; padding: 4px 10px; border-radius: 20px; text-transform: uppercase; letter-spacing: 1px;">Issue 01</span>
         <span style="font-size: 1.2rem;">⚡️</span>
       </div>
-      <h3>Digital &amp; Fintech Pressure</h3>
-      <p style="text-align: justify;">
-        FinTech innovations like digital wallets, digital onboarding processes, Robo-Advisories, and crowdfunding have transformed Islamic banking. Despite making processes easier, these advancements complicate Shariah compliance. All Islamic banks need to ensure that all their technological products and transactions pass through the Shariah approval process before use. Due to the fast-paced changes in the technological world, there is a need for strong partnerships among regulators, Shariah experts, and technologists (Bank Negara Malaysia, 2019).
+      <h3 style="color: #1b5e20; margin: 0 0 0.6rem 0; font-size: 1.15rem; font-weight: 700;">Digital & Fintech Pressure</h3>
+      <p style="color: #444444; font-size: 0.9rem; line-height: 1.55; margin: 0; text-align: justify;">
+       FinTech innovations like digital wallets, digital onboarding processes, Robo Advisory and crowdfunding have transformed Islamic banking. Despite making the work easier, these advancements complicate Shariah compliance. All Islamic banks need to ensure that all their technological products and transactions pass through the Shariah approval process before use. Due to the fast-paced changes in the technological world, there is a need for strong partnership among regulators, Shariah experts, and technologists. (Bank Negara Malaysia, 2019).
       </p>
     </div>
 
-    <!-- ISSUE 02 -->
-    <div class="card">
+    <!-- CARD 2 -->
+    <div style="
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 215, 0, 0.3);
+      border-radius: 14px;
+      padding: 1.8rem;
+      color: #222222;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      cursor: pointer;
+    "
+    onmouseover="this.style.transform='translateY(-8px) scale(1.02)'; this.style.borderColor='#ffd700'; this.style.boxShadow='0 15px 30px rgba(255, 215, 0, 0.3)';"
+    onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.borderColor='rgba(255, 215, 0, 0.3)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)';">
+      
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.8rem;">
-        <span class="eyebrow">Issue 02</span>
+        <span style="background: #1b5e20; color: #ffd700; font-size: 0.
+          72rem; font-weight: 800; padding: 4px 10px; border-radius: 20px; text-transform: uppercase; letter-spacing: 1px;">Issue 02</span>
         <span style="font-size: 1.2rem;">⚖️</span>
       </div>
-      <h3>Shariah-Compliant vs Based</h3>
-      <p style="text-align: justify;">
-        A key challenge in Islamic finance is differentiating between Shariah-compliant and Shariah-based instruments. Shariah-compliant instruments meet the legal requirements of Islamic law, while Shariah-based instruments align with the underlying objectives of Shariah such as justice, equity, transparency, and risk sharing. The extensive use of Tawarruq has alarmed some scholars as it resembles debt financing. Hence, Islamic financial institutions must develop more partnership-oriented products (ISRA, 2020).
+      <h3 style="color: #1b5e20; margin: 0 0 0.6rem 0; font-size: 1.15rem; font-weight: 700;">Shariah-Compliant vs Based</h3>
+      <p style="color: #444444; font-size: 0.9rem; line-height: 1.55; margin: 0; text-align: justify;">
+        A key challenge in Islamic finance is differentiating between Shariah-compliant and Shariah-based instruments. The Shariah-compliant instruments meet the legal requirements of Islamic law, while the Shariah-based instruments align with the underlying objectives of the Shariah such as justice, equity, transparency and risk sharing. The extensive use of Tawarruq has alarmed some scholars as it resembles debt financing. Hence, Islamic financial institutions must develop more partnership-oriented products. (International Shariah Research Academy for Islamic Finance, 2020). 
       </p>
     </div>
 
-    <!-- ISSUE 03 -->
-    <div class="card">
+    <!-- CARD 3 -->
+    <div style="
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 215, 0, 0.3);
+      border-radius: 14px;
+      padding: 1.8rem;
+      color: #222222;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      cursor: pointer;
+    "
+    onmouseover="this.style.transform='translateY(-8px) scale(1.02)'; this.style.borderColor='#ffd700'; this.style.boxShadow='0 15px 30px rgba(255, 215, 0, 0.3)';"
+    onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.borderColor='rgba(255, 215, 0, 0.3)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)';">
+      
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.8rem;">
-        <span class="eyebrow">Issue 03</span>
+        <span style="background: #1b5e20; color: #ffd700; font-size: 0.72rem; font-weight: 800; padding: 4px 10px; border-radius: 20px; text-transform: uppercase; letter-spacing: 1px;">Issue 03</span>
         <span style="font-size: 1.2rem;">📈</span>
       </div>
-      <h3>Benchmark &amp; Pricing Dependency</h3>
-      <p style="text-align: justify;">
-        Despite being non-interest-bearing, Islamic banks still adopt conventional benchmarks like BFR and KLIBOR to measure their financing products. While this maintains market competitiveness and pricing consistency, it causes public confusion regarding the distinctiveness of Islamic financial institutions. Therefore, most researchers strongly advocate for Islamic-based pricing benchmarks (AAOIFI, 2023).
+      <h3 style="color: #1b5e20; margin: 0 0 0.6rem 0; font-size: 1.15rem; font-weight: 700;">Benchmark & Pricing Dependency</h3>
+      <p style="color: #444444; font-size: 0.9rem; line-height: 1.55; margin: 0; text-align: justify;">
+        Despite being non-interest-bearing, Islamic banks still adopt conventional benchmarks like BFR and KLIBOR to measure their financing products. While this maintains market competitiveness and pricing consistency, it causes public confusion regarding the distinctiveness of Islamic financial institutions. Therefore, this is why most researchers strongly advocate for Islamic-based pricing benchmarks. (Accounting and Auditing Organisation for Islamic Financial Institutions, 2023).
       </p>
     </div>
+
   </div>
+
 </section>
+  
+<!-- REAL PRODUCTS -->
+<section id="products" style="
+  position: relative;
+  background: linear-gradient(135deg, #0f2017 0%, #1b3a2b 100%);
+  padding: 4rem 2rem;
+  border-radius: 16px;
+  margin: 2.5rem 0;
+  color: #ffffff;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+">
 
-<!-- SECTION 4: REAL-LIFE APPLICATION -->
-<section id="products" class="tint-emerald">
-  <div class="section-head">
-    <p class="eyebrow"><span class="num">4</span>Real-Life Application</p>
-    <h2>Islamic Financial Contracts in Practice</h2>
-    <p>How core Shariah principles are structured into everyday modern banking products.</p>
+  <!-- TAJUK SECTION -->
+  <div style="text-align: center; margin-bottom: 3.5rem;">
+    <p style="color: #ffd700; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 0.4rem; font-size: 0.85rem;">4 • Real-Life Application</p>
+    <h2 style="color: #ffffff; font-size: 2rem; margin-top: 0; font-weight: 700;"> Islamic Financial Contracts in Practice</h2>
+    <p style="max-width: 650px; margin: 0.5rem auto 0; color: #b0bec5; font-size: 0.95rem;">
+      How core Shariah principles are structured into everyday modern banking products.
+    </p>
   </div>
 
-  <div style="display: flex; flex-direction: column; gap: 2rem;">
+  <div style="display: flex; flex-direction: column; gap: 3rem; max-width: 1000px; margin: 0 auto;">
 
-    <!-- 01. MUDHARABAH -->
-    <div class="card" style="display: flex; align-items: center; justify-content: space-between; gap: 2rem;">
-      <div style="flex: 1;">
-        <span class="eyebrow">01. Profit-Sharing Partnership</span>
-        <h3 style="font-size: 1.4rem; margin: 0.4rem 0;">Mudharabah Investment</h3>
-        <p style="text-align: justify;">
-          A profit-sharing contract where the customer provides capital and the bank manages the investment. Profits are shared based on an agreed ratio, but losses are borne by the capital provider unless caused by the bank’s negligence.
-      Commonly used in Islamic investment accounts as it reflects the risk-sharing principle central to Islamic finance (BNM, 2013).
+    <!-- 1. MUDHARABAH -->
+    <div style="
+      display: flex; 
+      flex-wrap: wrap; 
+      align-items: center; 
+      justify-content: space-between; 
+      gap: 2rem;
+      background: rgba(255, 255, 255, 0.04);
+      padding: 2rem;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    ">
+      <!-- TEKS KIRI -->
+      <div style="flex: 1; min-width: 280px;">
+        <span style="background: rgba(255,215,0,0.15); color: #ffd700; font-weight: bold; padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; text-transform: uppercase;">01. Profit-Sharing Partnership</span>
+        <h3 style="font-size: 1.8rem; margin: 0.8rem 0; color: #ffffff;">
+          Mudharabah <span style="background: #ffd700; color: #111; padding: 2px 8px; border-radius: 4px; font-size: 1.4rem;">Investment</span>
+        </h3>
+        <p style="color: #d1d5db; line-height: 1.6; font-size: 0.95rem; text-align: justify;">
+          A profit-sharing contract where the customer provides capital and the bank manages the investment. Profits are shared based on an agreed ratio, but losses are borne by the capital provider unless caused by the bank’s negligence. Commonly used in Islamic investment accounts as it reflects the risk-sharing principle central to Islamic finance (BNM, 2013).
         </p>
-        <p style="font-size: 0.82rem; margin-top: 0.6rem; font-style: italic; color: var(--ink-soft);">
+        <p style="color: #9ca3af; font-size: 0.85rem; margin-top: 0.8rem; font-style: italic;">
           📌 Applied in: Investment accounts, term deposits, and wealth management.
         </p>
       </div>
-      <!-- POLAROID FRAME -->
-      <div style="width: 200px; shrink: 0; background: #fff; padding: 12px 12px 25px 12px; border: 1px solid rgba(0,0,0,0.1); box-shadow: 0 10px 20px rgba(0,0,0,0.15); transform: rotate(-2deg);">
-        <img src="mudharabah_vault.png" alt="Mudharabah Investment" style="width: 100%; height: 140px; object-fit: cover; display: block;" onerror="this.src='https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=600&q=80'">
+
+      <!-- GAMBAR POLAROID (EFFECT ZOOM & TERANGKAT) -->
+      <div style="
+        width: 260px;
+        background: #ffffff;
+        padding: 12px 12px 16px 12px;
+        border-radius: 8px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        transition: all 0.35s ease;
+        cursor: pointer;
+      "
+      onmouseover="this.style.transform='scale(1.06) translateY(-10px)'; this.style.boxShadow='0 20px 35px rgba(0,0,0,0.5)';"
+      onmouseout="this.style.transform='scale(1) translateY(0px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.3)';">
+        <img src="mudharabah_vault.png" alt="Mudharabah Investment" style="width: 100%; height: 200px; object-fit: cover; border-radius: 4px; display: block;" onerror="this.src='https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=600&q=80'">
       </div>
     </div>
 
-    <!-- 02. MURABAHAH -->
-    <div class="card" style="display: flex; align-items: center; justify-content: space-between; gap: 2rem;">
-      <div style="flex: 1;">
-        <span class="eyebrow">02. Cost-Plus Sale</span>
-        <h3 style="font-size: 1.4rem; margin: 0.4rem 0;">Murabahah Financing</h3>
-        <p style="text-align: justify;">
+    <!-- 2. MURABAHAH -->
+    <div style="
+      display: flex; 
+      flex-wrap: wrap; 
+      align-items: center; 
+      justify-content: space-between; 
+      gap: 2rem;
+      background: rgba(255, 255, 255, 0.04);
+      padding: 2rem;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    ">
+      <!-- TEKS KIRI -->
+      <div style="flex: 1; min-width: 280px;">
+        <span style="background: rgba(255,215,0,0.15); color: #ffd700; font-weight: bold; padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; text-transform: uppercase;">02. Cost-Plus Sale</span>
+        <h3 style="font-size: 1.8rem; margin: 0.8rem 0; color: #ffffff;">
+          Murabahah <span style="background: #ffd700; color: #111; padding: 2px 8px; border-radius: 4px; font-size: 1.4rem;">Financing</span>
+        </h3>
+        <p style="color: #d1d5db; line-height: 1.6; font-size: 0.95rem; text-align: justify;">
           A sale-and-purchase contract where the bank buys an asset first, then resells it to the customer at cost plus an agreed profit margin, avoiding gharar since the price is known upfront. Widely used for vehicle, equipment, and business financing via instalments, ensuring the transaction is asset-based rather than an interest-bearing loan (BNM, 2013; AAOIFI, 2015).
         </p>
-        <p style="font-size: 0.82rem; margin-top: 0.6rem; font-style: italic; color: var(--ink-soft);">
+        <p style="color: #9ca3af; font-size: 0.85rem; margin-top: 0.8rem; font-style: italic;">
           📌 Applied in: Home financing, auto financing, and asset acquisitions.
         </p>
       </div>
-      <!-- POLAROID FRAME -->
-      <div style="width: 200px; shrink: 0; background: #fff; padding: 12px 12px 25px 12px; border: 1px solid rgba(0,0,0,0.1); box-shadow: 0 10px 20px rgba(0,0,0,0.15); transform: rotate(2deg);">
-        <img src="property_financing.png" alt="Murabahah Asset" style="width: 100%; height: 140px; object-fit: cover; display: block;" onerror="this.src='https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=600&q=80'">
+
+      <!-- GAMBAR POLAROID (EFFECT ZOOM & TERANGKAT) -->
+      <div style="
+        width: 260px;
+        background: #ffffff;
+        padding: 12px 12px 16px 12px;
+        border-radius: 8px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        transition: all 0.35s ease;
+        cursor: pointer;
+      "
+      onmouseover="this.style.transform='scale(1.06) translateY(-10px)'; this.style.boxShadow='0 20px 35px rgba(0,0,0,0.5)';"
+      onmouseout="this.style.transform='scale(1) translateY(0px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.3)';">
+        <img src="property_financing.png" alt="Murabahah Asset" style="width: 100%; height: 200px; object-fit: cover; border-radius: 4px; display: block;" onerror="this.src='https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=600&q=80'">
       </div>
     </div>
 
-    <!-- 03. TAWARRUQ -->
-    <div class="card" style="display: flex; align-items: center; justify-content: space-between; gap: 2rem;">
-      <div style="flex: 1;">
-        <span class="eyebrow">03. Commodity Murabahah</span>
-        <h3 style="font-size: 1.4rem; margin: 0.4rem 0;">Tawarruq Monetization</h3>
-        <p style="text-align: justify;">
-          A contract involving buying a commodity on deferred payment, then reselling it to a third party for cash. Widely used in personal financing and Islamic credit cards in Malaysia, but closely monitored by the Shariah Committee to ensure it isn’t just a workaround for interest-based loans (BNM, 2013; IFSB, 2020).
+    <!-- 3. TAWARRUQ -->
+    <div style="
+      display: flex; 
+      flex-wrap: wrap; 
+      align-items: center; 
+      justify-content: space-between; 
+      gap: 2rem;
+      background: rgba(255, 255, 255, 0.04);
+      padding: 2rem;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    ">
+      <!-- TEKS KIRI -->
+      <div style="flex: 1; min-width: 280px;">
+        <span style="background: rgba(255,215,0,0.15); color: #ffd700; font-weight: bold; padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; text-transform: uppercase;">03. Commodity Murabahah</span>
+        <h3 style="font-size: 1.8rem; margin: 0.8rem 0; color: #ffffff;">
+          Tawarruq <span style="background: #ffd700; color: #111; padding: 2px 8px; border-radius: 4px; font-size: 1.4rem;">Monetization</span>
+        </h3>
+        <p style="color: #d1d5db; line-height: 1.6; font-size: 0.95rem; text-align: justify;">
+        A contract involving buying a commodity on deferred payment, then reselling it to a third party for cash. Widely used in personal financing and Islamic credit cards in Malaysia, but closely monitored by the Shariah Committee to ensure it isn’t just a workaround for interest-based loans (BNM, 2013; IFSB, 2020).
         </p>
-        <p style="font-size: 0.82rem; margin-top: 0.6rem; font-style: italic; color: var(--ink-soft);">
+        <p style="color: #9ca3af; font-size: 0.85rem; margin-top: 0.8rem; font-style: italic;">
           📌 Applied in: Personal financing, Islamic credit cards, and liquidity management.
         </p>
       </div>
-      <!-- POLAROID FRAME -->
-      <div style="width: 200px; shrink: 0; background: #fff; padding: 12px 12px 25px 12px; border: 1px solid rgba(0,0,0,0.1); box-shadow: 0 10px 20px rgba(0,0,0,0.15); transform: rotate(-1deg);">
-        <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=600&q=80" alt="Tawarruq Liquidity" style="width: 100%; height: 140px; object-fit: cover; display: block;">
+
+      <!-- GAMBAR POLAROID (EFFECT ZOOM & TERANGKAT) -->
+      <div style="
+        width: 260px;
+        background: #ffffff;
+        padding: 12px 12px 16px 12px;
+        border-radius: 8px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        transition: all 0.35s ease;
+        cursor: pointer;
+      "
+      onmouseover="this.style.transform='scale(1.06) translateY(-10px)'; this.style.boxShadow='0 20px 35px rgba(0,0,0,0.5)';"
+      onmouseout="this.style.transform='scale(1) translateY(0px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.3)';">
+        <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=600&q=80" alt="Tawarruq Liquidity" style="width: 100%; height: 200px; object-fit: cover; border-radius: 4px; display: block;">
       </div>
     </div>
 
   </div>
-      </section>
   <!-- VIDEO: BNM ON ISLAMIC FINANCING'S ROLE -->
   <div style="max-width: 1000px; margin: 3rem auto 0; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,215,0,0.25); border-radius: 16px; padding: 1.8rem;">
     <p style="color: #ffd700; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; font-size: 0.78rem; margin-bottom: 0.6rem;">🎬 Watch: BNM on Islamic Financing's Role</p>
