@@ -8,6 +8,89 @@
 <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 <style>/* KEMASKINI KHAS UNTUK SECTION 3 & 4 SUPAYA DUDUK TENGAH */ 
+ /* Custom Background & Styling untuk Critical Analysis & Real-Life Application */
+
+/* Critical Analysis Section (Dark / Emerald Theme) */
+.section-critical {
+  background: linear-gradient(135deg, #0b2219 0%, #123829 100%);
+  color: #f4f6f8;
+  padding: 60px 20px;
+  border-top: 3px solid #d4af37;
+  border-bottom: 3px solid #d4af37;
+}
+
+.critical-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.critical-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 12px;
+  padding: 25px;
+  backdrop-filter: blur(5px);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.critical-card:hover {
+  transform: translateY(-5px);
+  border-color: #d4af37;
+}
+
+.critical-card h3 {
+  color: #d4af37;
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Real-Life Application Section (Light Tint / Soft Gold Theme) */
+.section-application {
+  background-color: #fcfbfa;
+  padding: 60px 20px;
+}
+
+.app-case-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.app-card {
+  background: #ffffff;
+  border-left: 5px solid #0f382c;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  padding: 25px;
+  transition: all 0.3s ease;
+}
+
+.app-card:hover {
+  box-shadow: 0 6px 20px rgba(15, 56, 44, 0.12);
+}
+
+.app-badge {
+  display: inline-block;
+  background-color: #e8f4f0;
+  color: #0f382c;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.app-card h3 {
+  color: #0f382c;
+  margin-bottom: 10px;
+} 
 #analysis, #products, 
 #analysis .content-card, #products .content-card,
 #analysis .section-container, #products .section-container {
