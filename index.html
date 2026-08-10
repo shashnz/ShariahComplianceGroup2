@@ -1785,10 +1785,6 @@ Universiti Malaysia Kelantan · Faculty of Entrepreneurship and Business
     el.classList.add('reveal');
     el.style.transitionDelay = (i % 6) * 70 + 'ms';
   });
-document.querySelectorAll(revealSelectors).forEach((el, i) => {
-    el.classList.add('reveal');
-    el.style.transitionDelay = (i % 6) * 70 + 'ms';
-  });
 
   // 3D tilt effect for Critical Analysis cards
   function tiltCard(e, el){
@@ -1798,7 +1794,7 @@ document.querySelectorAll(revealSelectors).forEach((el, i) => {
     const midX = r.width / 2, midY = r.height / 2;
     const rotateY = ((x - midX) / midX) * 8;
     const rotateX = ((midY - y) / midY) * 8;
-    el.style.transform = perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px) scale(1.02);
+    el.style.transform = "perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px) scale(1.02);
     el.style.borderColor = '#ffd700';
     el.style.boxShadow = '0 15px 30px rgba(255, 215, 0, 0.3)';
   }
@@ -1807,9 +1803,6 @@ document.querySelectorAll(revealSelectors).forEach((el, i) => {
     el.style.borderColor = 'rgba(255, 215, 0, 0.3)';
     el.style.boxShadow = '0 8px 20px rgba(0,0,0,0.2)';
   }
-
-  const io = new IntersectionObserver((entries) => {
-    ...
   
   const io = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
