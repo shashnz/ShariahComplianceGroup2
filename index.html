@@ -8,6 +8,25 @@
 <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
  <style>/* KEMASKINI KHAS UNTUK SECTION 3 & 4 SUPAYA DUDUK TENGAH */ 
+   /* ===== CREATIVE SCROLL REVEAL ===== */
+.auto-reveal {
+  opacity: 0;
+  will-change: transform, opacity;
+  transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-up { transform: translateY(50px); }
+.reveal-zoom { transform: scale(0.85); }
+.reveal-left { transform: translateX(-60px); }
+.reveal-right { transform: translateX(60px); }
+.reveal-flip { transform: perspective(600px) rotateX(-20deg) translateY(30px); }
+
+.auto-reveal.is-visible {
+  opacity: 1;
+  transform: translate(0) scale(1) rotateX(0deg);
+}
+/* ================================== */
 #analysis, #products, 
 #analysis .content-card, #products .content-card,
 #analysis .section-container, #products .section-container {
@@ -1880,11 +1899,56 @@ Universiti Malaysia Kelantan · Faculty of Entrepreneurship and Business
   <!-- AOS Animation JS -->
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
-  AOS.init({
-    duration: 800,
-    once: true
+  document.addEventListener("DOMContentLoaded", function () {
+    // 1. Senarai semua elemen yang Sha nak bagi animasi secara automatik
+    const selectors = [
+      ".card", 
+      ".hadith-block", 
+      ".source-card", 
+      "table", 
+      "tr", 
+      ".section-title", 
+      ".hero", 
+      "footer",
+      ".badge",
+      "blockquote"
+    ];
+
+    const allElements = document.querySelectorAll(selectors.join(", "));
+    const animations = ["reveal-up", "reveal-zoom", "reveal-left", "reveal-right", "reveal-flip"];
+
+    // 2. Berikan animasi automatik secara variasi/kreatif
+    allElements.forEach((el, index) => {
+      el.classList.add("auto-reveal");
+      
+      // Pilih gaya animasi secara berselang-seli supaya tak bosan
+      const animType = animations[index % animations.length];
+      el.classList.add(animType);
+
+      // Tambah sedikit kelewatan (stagger delay) jika elemen duduk bersebelahan
+      const delay = (index % 4) * 0.15;
+      el.style.transitionDelay = `${delay}s`;
+    });
+
+    // 3. Kesan skrin apabila pengguna scroll (Intersection Observer)
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+          }
+        });
+      },
+      {
+        threshold: 0.12, // Bermula bila 12% elemen masuk ke skrin
+        rootMargin: "0px 0px -40px 0px"
+      }
+    );
+
+    // Mula pantau semua elemen
+    allElements.forEach((el) => observer.observe(el));
   });
-</script>
+</script> 
 
 </body>
 </html>
