@@ -1890,8 +1890,8 @@ Universiti Malaysia Kelantan · Faculty of Entrepreneurship and Business
 <script>
   document.addEventListener("DOMContentLoaded", function() {
     // 1. Automatik letak animasi pada semua kad, jadual, tajuk & seksyen tanpa kacau layout
-    const elements = document.querySelectorAll('.card, .content-card, .hadith-block, table, .section-title, #analysis, #products, section, footer');
-    const anims = ['fade-up', 'fade-right', 'fade-left', 'zoom-in', 'flip-up'];
+    const elements = document.querySelectorAll('.card, .content-card, .hadith-block, .sources-card, table, .section-title, #analysis, #products, section, footer');
+    const anims = ['fade-up', 'fade-right', 'fade-left', 'zoom-in'];
     
     elements.forEach((el, index) => {
       el.setAttribute('data-aos', anims[index % anims.length]);
